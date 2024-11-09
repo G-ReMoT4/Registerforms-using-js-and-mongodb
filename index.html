@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ReMoT4 Register Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <span></span>
+    <span></span>
+    <span></span>
+    <form id="signinForm">
+      <h2>Login</h2>
+      <div class="inputBox">
+        <input type="text" placeholder="Username">
+      </div>
+      <div class="inputBox">
+        <input type="password" placeholder="Password">
+      </div>
+      <div class="inputBox group">
+        <a href="#">Forgot Password</a>
+        <a href="#" id="signup">Signup</a>
+      </div>
+      <div class="inputBox">
+        <input type="submit" value="Sign in">
+      </div>
+    </form>
+
+    <!-- Fix: Added method="POST" and name attributes -->
+    <form action="/post" id="signupForm" method="POST">
+      <h2>Registration</h2>
+      <div class="inputBox">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="inputBox">
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="inputBox">
+        <input type="password" id="password" name="password" placeholder="Create Password" required>
+      </div>
+      <div class="inputBox">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+      </div>
+      <div class="inputBox">
+        <input type="submit" value="Register Account">
+      </div>
+      <div class="inputBox group">
+        <a href="#">Already Have an Account ? <b id="signin">Login</b></a>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
